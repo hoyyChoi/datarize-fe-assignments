@@ -24,5 +24,5 @@ export const ErrorState = styled.div`
   padding: 80px 0;
   text-align: center;
   font-size: 14px;
-  color: #99223a;
+  color: #ef4444;
 `

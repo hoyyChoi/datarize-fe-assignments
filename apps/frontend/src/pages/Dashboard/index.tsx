@@ -1,7 +1,7 @@
 import * as S from './Dashboard.styled'
 import { DashboardSection } from './components/DashboardSection'
-import { PurchaseFrequencyChart } from '@/components/PurchaseFrequencyChart'
 import { CustomerList } from '@/components/CustomerList'
+import PurchaseChart from './components/PurchaseChart'
 
 export const DashboardPage = () => {
   return (
@@ -16,7 +16,7 @@ export const DashboardPage = () => {
         </S.Header>
 
         <DashboardSection title="가격대별 구매 빈도" description="선택한 기간 동안의 가격대별 구매 횟수를 보여줍니다">
-          <PurchaseFrequencyChart />
+          <PurchaseChart />
         </DashboardSection>
 
         <DashboardSection title="고객 목록" description="총 구매 금액 및 횟수 기준으로 고객을 조회합니다">

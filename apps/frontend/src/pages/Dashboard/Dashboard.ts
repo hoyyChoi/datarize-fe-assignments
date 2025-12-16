@@ -18,16 +18,9 @@ export const Header = styled.header`
   margin-bottom: 28px;
 `
 
-export const HeaderIcon = styled.div`
-  width: 50px;
-  height: 50px;
-  font-size: 30px;
-  border-radius: 10px;
-  border: 1px solid #2563eb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+export const HeaderIcon = styled.img`
+  width: 40px;
+  height: 40px;
 `
 
 export const HeaderText = styled.div`

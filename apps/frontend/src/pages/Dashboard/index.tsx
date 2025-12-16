@@ -7,7 +7,7 @@ export const DashboardPage = () => {
     <S.Page>
       <S.Container>
         <S.Header>
-          <S.HeaderIcon>📊</S.HeaderIcon>
+          <S.HeaderIcon src="/logo.svg" alt="로고" />
           <S.HeaderText>
             <S.Title>구매 데이터 대시보드</S.Title>
             <S.Subtitle>2024년 7월 쇼핑몰 구매 데이터 분석</S.Subtitle>

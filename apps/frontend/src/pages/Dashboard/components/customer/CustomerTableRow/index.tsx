@@ -1,6 +1,6 @@
 import type { Customer } from '@/apis/domain/customer/type'
 import * as S from './CustomerTableRow.styled'
-import { formatCurrency } from '../../utils/formatCurrency'
+import { formatCurrency } from '../../../utils/formatCurrency'
 
 type Props = {
   customer: Customer

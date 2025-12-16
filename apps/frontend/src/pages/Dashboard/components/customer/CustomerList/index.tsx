@@ -8,8 +8,8 @@ import { SortAccordion, type SortOption } from '@/shared/components/SortAccordio
 import { CustomerTable } from '../CustomerTable'
 import { CustomerTableRow } from '../CustomerTableRow'
 import { CustomerDetailModal } from '@/components/CustomerDetailModal'
-import { filterCustomers } from '../../utils/filterCustomers'
-import { sortCustomers, type SortOrder } from '../../utils/sortCustomers'
+import { filterCustomers } from '../../../utils/filterCustomers'
+import { sortCustomers, type SortOrder } from '../../../utils/sortCustomers'
 
 const SORT_OPTIONS: SortOption<SortOrder>[] = [
   { value: 'desc', label: '높은 순' },

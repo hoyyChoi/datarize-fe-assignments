@@ -1,7 +1,7 @@
 import * as S from './Dashboard.styled'
 import { DashboardSection } from './components/DashboardSection'
-import { CustomerList } from '@/components/CustomerList'
-import PurchaseChart from './components/PurchaseChart'
+import { PurchaseChart } from './components/PurchaseChart'
+import { CustomerList } from './components/CustomerList'
 
 export const DashboardPage = () => {
   return (

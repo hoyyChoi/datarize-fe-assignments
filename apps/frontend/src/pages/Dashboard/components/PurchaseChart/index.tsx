@@ -11,7 +11,7 @@ export type ChartItem = {
   count: number
 }
 
-const PurchaseChart = () => {
+export const PurchaseChart = () => {
   const [dateRange, setDateRange] = useState<DateRange>({ from: '2024-07-01', to: '2024-07-31' })
   const { data, loading, error, refetch } = useFetch<ChartItem[], DateRange>({
     requestFn: (params) => getPurchaseFrequency(params || dateRange),
@@ -42,5 +42,3 @@ const PurchaseChart = () => {
     </>
   )
 }
-
-export default PurchaseChart

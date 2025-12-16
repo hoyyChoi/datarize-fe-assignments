@@ -1,12 +1,13 @@
 import { DashboardPage } from './pages/Dashboard'
 import { BrowserRouter, Route, Routes } from 'react-router'
+import { NotFoundPage } from './pages/NotFound'
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<DashboardPage />} />
-        <Route path="*" element={<div>not found</div>} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   )

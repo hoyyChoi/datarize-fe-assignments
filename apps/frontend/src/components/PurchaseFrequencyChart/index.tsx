@@ -21,7 +21,7 @@ const formatRange = (range: string) => {
 
 export const PurchaseFrequencyChart = () => {
   const [data, setData] = useState<ChartItem[]>([])
-  const [dateRange, setDateRange] = useState<DateRange>({ from: '', to: '' })
+  const [dateRange, setDateRange] = useState<DateRange>({ from: '2024-07-01', to: '2024-07-31' })
 
   useEffect(() => {
     async function fetchData() {

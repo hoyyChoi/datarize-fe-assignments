@@ -1,5 +1,5 @@
-import { DashboardPage } from './pages/Dashboard'
 import { BrowserRouter, Route, Routes } from 'react-router'
+import { DashboardPage } from './pages/Dashboard'
 import { NotFoundPage } from './pages/NotFound'
 
 function App() {

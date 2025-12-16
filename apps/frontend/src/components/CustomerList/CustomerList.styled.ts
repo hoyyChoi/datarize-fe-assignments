@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { Link } from 'react-router'
 
 export const Container = styled.div`
   display: flex;
@@ -12,7 +13,7 @@ export const SearchRow = styled.div`
 `
 
 export const SearchInput = styled.input`
-  width: 280px;
+  width: 380px;
   padding: 10px 14px;
   font-size: 14px;
   border-radius: 10px;
@@ -54,10 +55,10 @@ export const TableHeadRow = styled.div`
 `
 
 export const TableBody = styled.div`
-  min-height: 200px;
+  min-height: 400px;
 `
 
-export const TableRow = styled.div`
+export const TableRow = styled(Link)`
   display: grid;
   grid-template-columns: 80px 1fr 140px 180px;
   padding: 16px;
@@ -66,6 +67,11 @@ export const TableRow = styled.div`
   border-bottom: 1px solid #f3f4f6;
   cursor: pointer;
   transition: background 0.15s ease;
+
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
 
   &:last-child {
     border-bottom: none;
@@ -97,7 +103,10 @@ export const SortCell = styled(Cell)<{ active?: boolean }>`
 `
 
 export const StateRow = styled.div`
-  padding: 64px 0;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   font-size: 14px;
   color: #9ca3af;

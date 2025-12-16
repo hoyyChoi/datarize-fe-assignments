@@ -2,6 +2,8 @@ import { useMemo, useState } from 'react'
 import { getCustomers } from '@/apis/domain/customer'
 import { useFetch } from '@/hooks/useFetch'
 import * as S from './CustomerList.styled'
+import { CustomerDetailModal } from '../CustomerDetailModal'
+import { useSearchParams } from 'react-router'
 
 type SortField = 'totalAmount' | 'count'
 type SortOrder = 'asc' | 'desc' | null
@@ -18,6 +20,8 @@ export const CustomerList = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [sortField, setSortField] = useState<SortField>('totalAmount')
   const [sortOrder, setSortOrder] = useState<SortOrder>(null)
+  const [searchParams] = useSearchParams()
+  const customerId = searchParams.get('customerId')
 
   const filteredAndSortedCustomers = useMemo(() => {
     if (!customers) return []
@@ -84,7 +88,7 @@ export const CustomerList = () => {
       <S.Container>
         <S.SearchRow>
           <S.SearchInput
-            placeholder="고객 이름 검색..."
+            placeholder="고객 이름 검색"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
@@ -108,7 +112,7 @@ export const CustomerList = () => {
                 <S.StateRow>검색 결과가 없습니다.</S.StateRow>
               ) : (
                 filteredAndSortedCustomers.map((customer) => (
-                  <S.TableRow key={customer.id} onClick={() => {}}>
+                  <S.TableRow key={customer.id} to={`?customerId=${customer.id}`}>
                     <S.Cell>{customer.id}</S.Cell>
                     <S.Cell>{customer.name}</S.Cell>
                     <S.Cell align="right">{customer.count}회</S.Cell>
@@ -122,6 +126,8 @@ export const CustomerList = () => {
           </S.Table>
         </S.TableWrapper>
       </S.Container>
+
+      {customerId && <CustomerDetailModal />}
     </>
   )
 }

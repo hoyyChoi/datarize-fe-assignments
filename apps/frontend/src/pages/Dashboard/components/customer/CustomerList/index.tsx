@@ -27,6 +27,7 @@ export const CustomerList = () => {
     data: customers,
     loading,
     error,
+    refetch,
   } = useFetch({
     requestFn: () => getCustomers(),
   })
@@ -37,11 +38,19 @@ export const CustomerList = () => {
     return sortCustomers(filtered, sortOrder)
   }, [customers, searchQuery, sortOrder])
 
+  const handleRefresh = () => refetch()
+
   return (
     <>
       <S.Container>
         <S.ControlRow>
-          <SearchInput value={searchQuery} onChange={setSearchQuery} placeholder="고객 이름 검색" />
+          <S.LeftControls>
+            <SearchInput value={searchQuery} onChange={setSearchQuery} placeholder="고객 이름 검색" />
+            <S.RefreshButton onClick={handleRefresh} disabled={loading}>
+              🔄 새로고침
+            </S.RefreshButton>
+          </S.LeftControls>
+
           <SortAccordion value={sortOrder} options={SORT_OPTIONS} onChange={setSortOrder} label="총 구매 금액" />
         </S.ControlRow>
 

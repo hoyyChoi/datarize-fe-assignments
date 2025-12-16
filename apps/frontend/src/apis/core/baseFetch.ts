@@ -37,7 +37,7 @@ const baseFetch = async <Res, Req = undefined, Q = undefined>({
   })
 
   if (!response.ok) {
-    throw new Error(`API Error: ${response.status}`)
+    throw new Error(`API Error: ${response.status} | ${response.statusText}`)
   }
 
   return (await response.json()) as Res

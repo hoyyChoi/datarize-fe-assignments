@@ -1,36 +1,30 @@
-// PurchaseFrequencyChart.styled.ts
 import styled from '@emotion/styled'
 
 export const Card = styled.section`
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   background: #ffffff;
-  border-radius: 16px;
-  padding: 28px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 `
 
 export const Header = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 `
 
 export const Title = styled.h2`
-  font-size: 18px;
-  font-weight: 700;
-  color: #111827;
-  letter-spacing: -0.02em;
+  font-size: 16px;
+  font-weight: 600;
 `
 
 export const DateRow = styled.div`
   display: flex;
   align-items: center;
-  gap: 10px;
-  color: #9ca3af;
-  font-size: 14px;
-  font-weight: 500;
+  gap: 8px;
 `
 
 export const DateInput = styled.input`
@@ -59,7 +53,17 @@ export const DateInput = styled.input`
 
 export const ChartArea = styled.div`
   width: 100%;
-  height: 400px;
+  height: 380px;
+  svg {
+    outline: none;
+  }
+`
+
+export const StateMessage = styled.div`
+  padding: 80px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
 `
 
 export const TooltipBox = styled.div`

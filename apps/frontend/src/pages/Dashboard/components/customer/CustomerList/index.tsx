@@ -7,9 +7,9 @@ import { SearchInput } from '@/shared/components/SearchInput'
 import { SortAccordion, type SortOption } from '@/shared/components/SortAccordion'
 import { CustomerTable } from '../CustomerTable'
 import { CustomerTableRow } from '../CustomerTableRow'
-import { CustomerDetailModal } from '@/components/CustomerDetailModal'
 import { filterCustomers } from '../../../utils/filterCustomers'
 import { sortCustomers, type SortOrder } from '../../../utils/sortCustomers'
+import { CustomerDetailModal } from '../../customerDetail/CustomerDetailModal'
 
 const SORT_OPTIONS: SortOption<SortOrder>[] = [
   { value: 'desc', label: '높은 순' },

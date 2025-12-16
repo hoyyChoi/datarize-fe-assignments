@@ -10,8 +10,8 @@ export const Section = styled.section`
 
 export const Header = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 6px;
   margin-bottom: 16px;
 `
 

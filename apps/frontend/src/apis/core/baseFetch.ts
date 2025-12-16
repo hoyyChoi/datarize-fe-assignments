@@ -1,4 +1,4 @@
-import type { HTTPMethod } from '../types'
+import type { HTTPMethod } from './type'
 
 const BASE_URL = 'http://localhost:4000'
 

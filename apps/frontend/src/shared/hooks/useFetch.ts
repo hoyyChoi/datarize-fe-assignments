@@ -5,14 +5,14 @@ type UseFetchOptions<T, P = void> = {
 }
 
 type UseFetchReturn<T, P = void> = {
-  data: T | null
+  data: T | undefined
   loading: boolean
   error: string | null
   refetch: (params?: P) => Promise<void>
 }
 
 export const useFetch = <T, P = void>({ requestFn }: UseFetchOptions<T, P>): UseFetchReturn<T, P> => {
-  const [data, setData] = useState<T | null>(null)
+  const [data, setData] = useState<T | undefined>(undefined)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const requestFnRef = useRef(requestFn)

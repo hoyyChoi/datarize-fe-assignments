@@ -1,7 +1,7 @@
 import * as S from './CustomerDetailModal.styled'
 import { createPortal } from 'react-dom'
 import { getCustomers, getCustomerPurchases } from '@/apis/domain/customer'
-import { useFetch } from '@/hooks/useFetch'
+import { useFetch } from '@/shared/hooks/useFetch'
 import { useCustomerModal } from '@/pages/Dashboard/hooks/useCustomerModal'
 import { useKeyboardEscape } from '@/pages/Dashboard/hooks/useKeyboardEscape'
 import { useLockBodyScroll } from '@/pages/Dashboard/hooks/useLockBodyScroll'

@@ -1,6 +1,6 @@
 import * as S from './PurchaseChart.styled'
 import { useCallback, useState } from 'react'
-import { useFetch } from '@/hooks/useFetch'
+import { useFetch } from '@/shared/hooks/useFetch'
 import { formatRange } from '../../utils/formatRange'
 import { getPurchaseFrequency } from '@/apis/domain/purchase'
 import { DateRange, DateRangePicker } from '@/shared/components/DateRangePicker'
